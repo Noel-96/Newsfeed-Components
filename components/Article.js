@@ -3,8 +3,8 @@
 // You can read about ES6 modules here: https://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules
 const data = [
   {
-    title: 'Lambda School Students: "We\'re the best!"',
-    date: 'Nov 5th, 2018',
+    header2: 'Lambda School Students: "We\'re the best!"',
+    paragraphDate: 'Nov 5th, 2018',
     firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
         moff wicket tatooine luke.Solo wampa wampa calrissian yoda moff.Darth grievous darth gonk darth hutt.Darth baba skywalker
         watto fett jango maul han.Mon ewok sidious sidious lando kenobi grievous gamorrean solo.Yoda wedge utapau darth calamari.
@@ -24,8 +24,8 @@ const data = [
         moff calamari mon obi-wan. Solo grievous lando coruscant. Jinn darth palpatine obi-wan mon.`
   },
   {
-    title: 'Javascript and You, ES6',
-    date: 'May 7th, 2019',
+    header2: 'Javascript and You, ES6',
+    paragraphDate: 'May 7th, 2019',
     firstParagraph: `Alohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost
         Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot
         snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods
@@ -44,8 +44,8 @@ const data = [
         sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.`
   },
   {
-    title: 'React vs Angular vs Vue',
-    date: 'June 7th, 2019',
+    header2: 'React vs Angular vs Vue',
+    paragraphDate: 'June 7th, 2019',
     firstParagraph: `Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charmander Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Charmeleon Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charizard Lorem ipsum dolor sit amet,
@@ -72,8 +72,24 @@ const data = [
         Castform Lotad the power that's inside Burnt Berry Makuhita. Ghost Ariados Corphish Dusclops Golbat Gligar Zweilous.`
   },
   {
-    title: 'Professional Software Development in 2019',
-    date: 'Jan 1st, 2019',
+    header2: 'Professional Software Development in 2019',
+    paragraphDate: 'Jan 1st, 2019',
+    firstParagraph: `Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
+          hodor. Hodor, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
+          Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
+
+    secondParagraph: `Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor! Hodor hodor, hodor;
+          hodor hodor hodor? Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor! Hodor, hodor. Hodor. Hodor, HODOR
+          hodor, hodor hodor, hodor, hodor hodor. Hodor hodor - hodor - hodor... Hodor hodor hodor hodor hodor hodor hodor?! Hodor
+          hodor - hodor hodor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor? `,
+
+    thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
+          Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
+          Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    header2: 'Professional Software Development in 2020',
+    paragraphDate: 'Jan 1st, 2020',
     firstParagraph: `Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
           hodor. Hodor, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
           Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
@@ -95,8 +111,8 @@ const data = [
   and returns a DOM node looking like the one below:
 
   <div class="article">
-    <h2>{title of the article}</h2>
-    <p class="date">{date of the article}</p>
+    <h2>{header2 of the article}</h2>
+    <p class="paragraphDate">{paragraphDate of the article}</p>
 
     {three separate paragraph elements}
 
@@ -114,3 +130,58 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+
+function articleMaker (article){
+     const articleDiv = document.createElement('div')
+     const header2 = document.createElement('h2')
+     const paragraphparagraphDate = document.createElement('p')
+     const firstParagraph = document.createElement('p')
+     const secondParagraph = document.createElement('p')
+     const thirdParagraph = document.createElement('p')
+     const span = document.createElement('span')
+
+
+
+
+     // setting up class name
+     articleDiv.classList.add('article')
+     paragraphparagraphDate.classList.add('paragraphDate')
+     span.classList.add('expandButton')
+
+
+     // setting up data 
+     header2.textContent = article.header2
+     paragraphparagraphDate.textContent = article.paragraphDate
+     firstParagraph.textContent = article.firstParagraph
+     secondParagraph.textContent = article.secondParagraph
+     thirdParagraph.textContent = article.thirdParagraph
+     span.textContent = '+' 
+
+
+
+     // setting up the structure 
+     articleDiv.appendChild(header2)
+     articleDiv.appendChild(paragraphparagraphDate)
+     articleDiv.appendChild(firstParagraph)
+     articleDiv.appendChild(secondParagraph)
+     articleDiv.appendChild(thirdParagraph)
+     articleDiv.appendChild(span)
+
+     //setting up the event listner 
+     span.addEventListener('click', () => {
+      articleDiv.classList.toggle('article-open');
+    })
+
+ 
+  return  articleDiv 
+}
+
+
+
+
+data.forEach(element => {
+  const articleBuilder = articleMaker(element);
+  document.querySelector('div.articles').appendChild(articleBuilder);
+  });
+
